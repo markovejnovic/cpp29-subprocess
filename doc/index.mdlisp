@@ -10,7 +10,7 @@ subprocesses.
              (ice-9 ftw)
              (srfi srfi-1))
 
-(define (doc2url doc-file) (format #f "/~a.html" (%without-ext doc-file)))
+(define (doc2url doc-file) (format #f "/cpp29-subprocess/~a.html" (%without-ext doc-file)))
 (define links (map (lambda (p) p (format #f "- [~a](~a)" (%without-ext p) (doc2url p)))
                    (%my-siblings)))
 
