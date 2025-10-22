@@ -1,2 +1,2 @@
 FROM alpine:3.22.2
-RUN apk add --no-cache pandoc-cli make
+RUN apk add --no-cache pandoc-cli make tar
