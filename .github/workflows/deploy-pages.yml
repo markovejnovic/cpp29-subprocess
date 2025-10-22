@@ -31,12 +31,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build HTML documentation
-        run: make web
+        run: make html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '_build/web'
+          path: '_build/html'
 
   deploy:
     environment:

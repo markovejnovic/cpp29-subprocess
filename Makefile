@@ -6,16 +6,16 @@ clean:
 	rm -rf _build
 
 pdf: _build/motivation.pdf
-html: _build/web/motivation.html _build/web/index.html
+html: _build/html/motivation.html _build/html/index.html
 
-_build/web/index.html: _build/_artifacts/index.md
+_build/html/index.html: _build/_artifacts/index.md
 	pandoc $< -o $@ --highlight-style=pygments
 
 _build/motivation.pdf: doc/motivation.md
 	mkdir -p $(dir $@)
 	pandoc $< -o $@
 
-_build/web/motivation.html: doc/motivation.md
+_build/html/motivation.html: doc/motivation.md
 	mkdir -p $(dir $@)
 	pandoc $< -o $@ --highlight-style=pygments
 
