@@ -1,0 +1,19 @@
+# C++ 29 Subprocesses
+
+This webpage documents an attempt to create a modern C++ library for managing
+subprocesses.
+
+## Table of contents
+
+:::(template-block)
+(use-modules (ice-9 format)
+             (ice-9 ftw)
+             (srfi srfi-1))
+
+(define (doc2url doc-file) (format #f "/~a.html" (%without-ext doc-file)))
+(define links (map (lambda (p) p (format #f "- [~a](~a)" (%without-ext p) (doc2url p)))
+                   (%my-siblings)))
+
+
+(string-join links "\n")
+:::(/template-block)
